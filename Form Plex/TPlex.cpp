@@ -27,12 +27,13 @@ void TPlex::addLine(TLine *l)
 	}
 	else
 	{
-		TLine *left = findLineWithPoint(l->getLeft()->getName());
-		TLine *right = findLineWithPoint(l->getRight()->getName());
+		TLine *left = findLineWithPoint(((TPoint*)l->getLeft())->getName());
+		TLine *right = findLineWithPoint(((TPoint*)l->getRight())->getName());
 
 		if (left != nullptr && right == nullptr)
 		{
 			attachToLeft(left, l);
+
 		}
 		else if (left == nullptr && right != nullptr)
 		{
@@ -286,7 +287,7 @@ TLine* TPlex::findLineWithPoint(int x, int y)
 	TStack<TLine *> lines(100);
 	lines.push(nullptr);
 
-	while (res == nullptr && cur != nullptr)
+	while (cur != nullptr && res == nullptr)
 	{
 		if (cur->getType() == POINT)
 		{
@@ -443,7 +444,6 @@ TPoint* TPlex::findPoint(int x, int y)
 			case 3:
 				((TLine *)cur)->updateMultiplicity();
 
-			
 				cur = lines.pop();
 
 				if (cur != nullptr)
@@ -648,6 +648,15 @@ void TPlex::draw(System::Drawing::Graphics^ g)
 			}
 		}
 	}
+
+	while (lines.peek() != nullptr)
+	{
+		cur = lines.pop();
+		while (cur->getMultiplicity() != 1)
+		{
+			((TLine *)cur)->updateMultiplicity();
+		}
+	}
 }
 
 void TPlex::recolor(int color)
@@ -753,6 +762,14 @@ void TPlex::open(std::string path)
 		infile.open(path);
 		TStack<TBase*> stack(100);
 
+		TPoint* points[100];
+		int lastp = -1;
+		int pID = -1;
+
+		TLine* lines[100];
+		int lastl = -1;
+		int lID = -1;
+
 		while (!infile.eof())
 		{
 			getline(infile, item);
@@ -764,14 +781,45 @@ void TPlex::open(std::string path)
 
 			if (item.find("POINT") == 0)
 			{
-				TBase *point = new TPoint(item);
-				stack.push(point);
+				TPoint*point = new TPoint(item);
+				for (int i = 0; i <= lastp && pID == -1; i++)
+				{
+					if (points[i]->getName() == point->getName())
+					{
+						pID = i;
+					}
+				}
+				
+				if (pID != -1)
+				{
+					stack.push(points[pID]);
+					pID = -1;
+				}
+				else
+				{
+					points[++lastp] = point;
+					stack.push(point);
+				}
 			}
 			else if (item.find("LINE") == 0)
 			{
 				TLine *line = new TLine(item);
+
+				for (int i = 0; i <= lastl && lID == -1; i++)
+				{
+					if (lines[i]->getName() == line->getName())
+					{
+						lID = i;
+					}
+				}
+				if (lID != -1)
+				{
+					line = lines[lID];
+					lID = -1;
+				}
+
 				line->setRight(stack.pop());
-				line->setLeft(stack.peek());
+				line->setLeft(stack.pop());
 				stack.push(line);
 			}
 		}
@@ -819,8 +867,7 @@ void TPlex::showPointNames(System::Drawing::Graphics^ g)
 				break;
 			case 3:
 				((TLine*)cur)->updateMultiplicity();
-				//TLine *l = lines.pop();
-				//cur = l;
+
 				cur = lines.pop();
 				if (cur != nullptr)
 				{
@@ -873,8 +920,7 @@ void TPlex::showNearesPointNames(System::Drawing::Graphics^ g, int x, int y)
 				break;
 			case 3:
 				((TLine*)cur)->updateMultiplicity();
-				//TLine *l = lines.pop();
-				//cur = l;
+
 				cur = lines.pop();
 				if (cur != nullptr)
 				{
@@ -884,5 +930,4 @@ void TPlex::showNearesPointNames(System::Drawing::Graphics^ g, int x, int y)
 			}
 		}
 	}
-
 }

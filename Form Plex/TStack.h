@@ -5,32 +5,32 @@ class TStack
 {
 private:
 	T *arr;
-	int size;
-	int last;
+	unsigned int size;
+	unsigned int last;
 public:
-	TStack(int n = 25)
+	TStack(unsigned int n = 25)
 	{
 		size = n;
-		arr = new T[size];
-		T zero(0);
 		last = 0;
+		arr = new T[size];
+		//T zero(0);
 
-		for (int i = 0; i < size; i++)
+		/*for (int i = 0; i < size; i++)
 		{
 			arr[i] = zero;
-		}
+		}*/
 	}
 
 	TStack(const TStack& src)
 	{
 		size = src.size;
+		last = src.last;
 		arr = new T[size];
 
 		for (int i = 0; i < size; i++)
 		{
 			arr[i] = src.arr[i];
 		}
-		last = src.last;
 	}
 
 	~TStack()
@@ -63,24 +63,23 @@ public:
 
 	bool isEmpty()
 	{
-		return (last == 0);
+		return (last == 0) ? true : false;
 	}
 
 	bool isFull()
 	{
-		return (last == size - 1);
+		return (last == size - 1) ? true : false;
 	}
 
 	T peek()
 	{
-		if (!isEmpty())
-		{
-			return arr[last - 1];
-		}
-		else
-		{
-			return T(0);
-		}
+		return !isEmpty() ? arr[last - 1] : T(0);
+	}
+
+
+	T pop()
+	{
+		return !isEmpty() ? arr[--last] : T(0);
 	}
 
 	void push(T item)
@@ -89,21 +88,6 @@ public:
 		{
 			arr[last++] = item;
 		}
-	}
-
-	T pop()
-	{
-		T res(0);
-
-		if (!isEmpty())
-		{
-			//res = arr[last - 1];
-			//arr[last--] = T(0);
-
-			res = arr[--last];
-		}
-
-		return res;
 	}
 };
 

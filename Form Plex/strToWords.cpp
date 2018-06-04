@@ -7,7 +7,7 @@ void strToWords(std::string src, std::string *words, int &size)
 	size = 0;
 
 	size_t pos = tmp.find(delimiters);
-	while (pos = tmp.find(delimiters) != std::string::npos)
+	while (pos != std::string::npos)
 	{
 		pos = tmp.find(delimiters);
 		words[size++] = tmp.substr(0, pos);

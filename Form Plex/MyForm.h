@@ -134,6 +134,7 @@ namespace FormPlex
 			// 
 			// ïîêàçàòüÈìåíàÒî÷åêToolStripMenuItem
 			// 
+			this->ïîêàçàòüÈìåíàÒî÷åêToolStripMenuItem->Enabled = false;
 			this->ïîêàçàòüÈìåíàÒî÷åêToolStripMenuItem->Name = L"ïîêàçàòüÈìåíàÒî÷åêToolStripMenuItem";
 			this->ïîêàçàòüÈìåíàÒî÷åêToolStripMenuItem->Size = System::Drawing::Size(239, 26);
 			this->ïîêàçàòüÈìåíàÒî÷åêToolStripMenuItem->Text = L"Ïîêàçàòü èìåíà òî÷åê";
@@ -259,12 +260,13 @@ namespace FormPlex
 			{
 				g->Clear(SystemColors::Control);
 				delete drawing;
-				//drawing = new TDrawing();
+				drawing = new TDrawing();
 
 				std::string fileName;
 				MarshalString(openFileDialog->FileName, fileName);
 
 				drawing->open(fileName);
+				drawing->draw(g);
 			}
 		}
 	}
