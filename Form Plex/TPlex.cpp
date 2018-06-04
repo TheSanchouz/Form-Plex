@@ -47,13 +47,17 @@ void TPlex::addLine(TLine *l)
 			if (right->getLeft()->getName() == l->getLeft()->getName())
 			{
 				//delete l->getRight();
+
 				l->setRight(right->getLeft());
+
 				//l->getRight()->updateMultiplicity(1);
 			}
 			else
 			{
 				//delete l->getRight();
-				l->setRight(right->getRight());
+
+				//l->setRight(right->getLeft());
+
 				//l->getRight()->updateMultiplicity(1);
 			}
 		}
@@ -362,6 +366,15 @@ TPoint* TPlex::findPoint(std::string name)
 			if (((TPoint *)cur)->getName() == name)
 			{
 				res = (TPoint *)cur;
+
+				while (lines.peek() != nullptr)
+				{
+					cur = lines.pop();
+					while (cur->getMultiplicity() != 1)
+					{
+						((TLine *)cur)->updateMultiplicity();
+					}
+				}
 			}
 
 			cur = lines.pop();
@@ -421,6 +434,15 @@ TPoint* TPlex::findPoint(int x, int y)
 			if (((TPoint *)cur)->distance(x, y) == 1)
 			{
 				res = (TPoint *)cur;
+
+				while (lines.peek() != nullptr)
+				{
+					cur = lines.pop();
+					while (cur->getMultiplicity() != 1)
+					{
+						((TLine *)cur)->updateMultiplicity();
+					}
+				}
 			}
 
 			cur = lines.pop();
