@@ -1,11 +1,5 @@
 #include "TLine.h"
 
-//TLine::TLine() : TBase(LINE, "", 10)
-//{
-//	this->left = nullptr;
-//	this->right = nullptr;
-//}
-
 TLine::TLine(TPoint * left, TPoint * right) : TBase(LINE, left->getName() + " " + right->getName(), 7)
 {
 	this->left = left;
@@ -44,6 +38,9 @@ TLine & TLine::operator=(const TLine & src)
 
 TLine::~TLine()
 {
+	delete left;
+	delete right;
+
 	//left = nullptr;
 	//right = nullptr;
 }

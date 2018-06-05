@@ -2,7 +2,7 @@
 #include "TDrawing.h"
 #include <string>
 
-namespace FormPlex 
+namespace FormPlex
 {
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -61,7 +61,7 @@ namespace FormPlex
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Требуемый метод для поддержки конструктора — не изменяйте 
+		/// Требуемый метод для поддержки конструктора — не изменяйте
 		/// содержимое этого метода с помощью редактора кода.
 		/// </summary>
 		void InitializeComponent(void)
@@ -79,9 +79,9 @@ namespace FormPlex
 			this->стеретьРисунокToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip->SuspendLayout();
 			this->SuspendLayout();
-			// 
+			//
 			// menuStrip
-			// 
+			//
 			this->menuStrip->ImageScalingSize = System::Drawing::Size(20, 20);
 			this->menuStrip->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(5) {
 				this->создатьToolStripMenuItem,
@@ -93,23 +93,23 @@ namespace FormPlex
 			this->menuStrip->Size = System::Drawing::Size(1182, 28);
 			this->menuStrip->TabIndex = 0;
 			this->menuStrip->Text = L"menuStrip";
-			// 
+			//
 			// создатьToolStripMenuItem
-			// 
+			//
 			this->создатьToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->линиюToolStripMenuItem });
 			this->создатьToolStripMenuItem->Name = L"создатьToolStripMenuItem";
 			this->создатьToolStripMenuItem->Size = System::Drawing::Size(76, 24);
 			this->создатьToolStripMenuItem->Text = L"Создать";
-			// 
+			//
 			// линиюToolStripMenuItem
-			// 
+			//
 			this->линиюToolStripMenuItem->Name = L"линиюToolStripMenuItem";
 			this->линиюToolStripMenuItem->Size = System::Drawing::Size(133, 26);
 			this->линиюToolStripMenuItem->Text = L"Линию";
 			this->линиюToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::линиюToolStripMenuItem_Click);
-			// 
+			//
 			// функцииПоРаботеСПлексомToolStripMenuItem
-			// 
+			//
 			this->функцииПоРаботеСПлексомToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
 				this->переместитьПлексToolStripMenuItem,
 					this->переместитьТочкуToolStripMenuItem, this->показатьИменаТочекToolStripMenuItem, this->перекраситьПлексToolStripMenuItem
@@ -117,59 +117,59 @@ namespace FormPlex
 			this->функцииПоРаботеСПлексомToolStripMenuItem->Name = L"функцииПоРаботеСПлексомToolStripMenuItem";
 			this->функцииПоРаботеСПлексомToolStripMenuItem->Size = System::Drawing::Size(231, 24);
 			this->функцииПоРаботеСПлексомToolStripMenuItem->Text = L"Функции по работе с плексом";
-			// 
+			//
 			// переместитьПлексToolStripMenuItem
-			// 
+			//
 			this->переместитьПлексToolStripMenuItem->Name = L"переместитьПлексToolStripMenuItem";
 			this->переместитьПлексToolStripMenuItem->Size = System::Drawing::Size(239, 26);
 			this->переместитьПлексToolStripMenuItem->Text = L"Переместить плекс";
 			this->переместитьПлексToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::переместитьПлексToolStripMenuItem_Click);
-			// 
+			//
 			// переместитьТочкуToolStripMenuItem
-			// 
+			//
 			this->переместитьТочкуToolStripMenuItem->Name = L"переместитьТочкуToolStripMenuItem";
 			this->переместитьТочкуToolStripMenuItem->Size = System::Drawing::Size(239, 26);
 			this->переместитьТочкуToolStripMenuItem->Text = L"Переместить точку";
 			this->переместитьТочкуToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::переместитьТочкуToolStripMenuItem_Click);
-			// 
+			//
 			// показатьИменаТочекToolStripMenuItem
-			// 
+			//
 			this->показатьИменаТочекToolStripMenuItem->Enabled = false;
 			this->показатьИменаТочекToolStripMenuItem->Name = L"показатьИменаТочекToolStripMenuItem";
 			this->показатьИменаТочекToolStripMenuItem->Size = System::Drawing::Size(239, 26);
 			this->показатьИменаТочекToolStripMenuItem->Text = L"Показать имена точек";
 			this->показатьИменаТочекToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::показатьИменаТочекToolStripMenuItem_Click);
-			// 
+			//
 			// перекраситьПлексToolStripMenuItem
-			// 
+			//
 			this->перекраситьПлексToolStripMenuItem->Name = L"перекраситьПлексToolStripMenuItem";
 			this->перекраситьПлексToolStripMenuItem->Size = System::Drawing::Size(239, 26);
 			this->перекраситьПлексToolStripMenuItem->Text = L"Перекрасить плекс";
 			this->перекраситьПлексToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::перекраситьПлексToolStripMenuItem_Click);
-			// 
+			//
 			// сохранитьРисунокToolStripMenuItem
-			// 
+			//
 			this->сохранитьРисунокToolStripMenuItem->Name = L"сохранитьРисунокToolStripMenuItem";
 			this->сохранитьРисунокToolStripMenuItem->Size = System::Drawing::Size(156, 24);
 			this->сохранитьРисунокToolStripMenuItem->Text = L"Сохранить рисунок";
 			this->сохранитьРисунокToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::сохранитьРисунокToolStripMenuItem_Click);
-			// 
+			//
 			// открытьРисунокToolStripMenuItem
-			// 
+			//
 			this->открытьРисунокToolStripMenuItem->Name = L"открытьРисунокToolStripMenuItem";
 			this->открытьРисунокToolStripMenuItem->Size = System::Drawing::Size(140, 24);
 			this->открытьРисунокToolStripMenuItem->Text = L"Открыть рисунок";
 			this->открытьРисунокToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::открытьРисунокToolStripMenuItem_Click);
-			// 
+			//
 			// стеретьРисунокToolStripMenuItem
-			// 
+			//
 			this->стеретьРисунокToolStripMenuItem->Name = L"стеретьРисунокToolStripMenuItem";
 			this->стеретьРисунокToolStripMenuItem->Size = System::Drawing::Size(136, 24);
 			this->стеретьРисунокToolStripMenuItem->Text = L"Стереть рисунок";
 			this->стеретьРисунокToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::стеретьРисунокToolStripMenuItem_Click);
-			// 
+			//
 			// MyForm
-			// 
+			//
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1182, 753);
@@ -189,7 +189,7 @@ namespace FormPlex
 		}
 #pragma endregion
 
-		void MarshalString(String ^ s, std::string& os) 
+		void MarshalString(String ^ s, std::string& os)
 		{
 			using namespace Runtime::InteropServices;
 			const char* chars =
@@ -210,7 +210,7 @@ namespace FormPlex
 		bool readyMovePlex = false;
 
 
-	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) 
+	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e)
 	{
 		g = CreateGraphics();
 
@@ -243,7 +243,7 @@ namespace FormPlex
 		}
 	}
 
-	private: System::Void открытьРисунокToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) 
+	private: System::Void открытьРисунокToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e)
 	{
 		if (MessageBox::Show(
 			"Вы действительно хотите открыть новый рисунок? При открытии нового рисунка произойдет удаление текущего.",
@@ -271,7 +271,7 @@ namespace FormPlex
 		}
 	}
 
-	private: System::Void стеретьРисунокToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) 
+	private: System::Void стеретьРисунокToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e)
 	{
 		if (MessageBox::Show(
 			"Вы действительно хотите стереть рисунок?",
@@ -286,14 +286,14 @@ namespace FormPlex
 
 	}
 
-	private: System::Void линиюToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) 
+	private: System::Void линиюToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e)
 	{
 		readyCreateLine = true;
 
 		readyMovePoint = false;
 		readyMovePlex = false;
 	}
-	private: System::Void MyForm_MouseDown(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) 
+	private: System::Void MyForm_MouseDown(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e)
 	{
 		if (e->Button == System::Windows::Forms::MouseButtons::Left && readyCreateLine)
 		{
@@ -314,7 +314,7 @@ namespace FormPlex
 		}
 	}
 
-	private: System::Void MyForm_MouseUp(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) 
+	private: System::Void MyForm_MouseUp(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e)
 	{
 		if (e->Button == System::Windows::Forms::MouseButtons::Left && readyCreateLine)
 		{
@@ -354,7 +354,7 @@ namespace FormPlex
 		}
 	}
 
-	private: System::Void переместитьПлексToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) 
+	private: System::Void переместитьПлексToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e)
 	{
 		readyMovePlex = true;
 
@@ -362,7 +362,7 @@ namespace FormPlex
 		readyMovePoint = false;
 	}
 
-	private: System::Void показатьИменаТочекToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) 
+	private: System::Void показатьИменаТочекToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e)
 	{
 		if (показатьИменаТочекToolStripMenuItem->Text == "Показать имена точек")
 		{
@@ -379,7 +379,7 @@ namespace FormPlex
 		}
 
 	}
-	private: System::Void перекраситьПлексToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) 
+	private: System::Void перекраситьПлексToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e)
 	{
 		ColorDialog ^colorDialog = gcnew ColorDialog;
 		colorDialog->ShowHelp = true;
@@ -391,7 +391,7 @@ namespace FormPlex
 			drawing->draw(g);
 		}
 	}
-	private: System::Void переместитьТочкуToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) 
+	private: System::Void переместитьТочкуToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e)
 	{
 		readyMovePoint = true;
 

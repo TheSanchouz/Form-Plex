@@ -11,7 +11,6 @@ private:
 
 	friend void strToWords(std::string src, std::string *words, int &size);
 public:
-	//TPoint();
 	TPoint(std::string name, int x, int y);
 	TPoint(const TPoint& src);
 	TPoint(std::string src);

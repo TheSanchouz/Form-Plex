@@ -1,10 +1,5 @@
 #include "TPoint.h"
 
-//TPoint::TPoint() : TBase(POINT, "", 10)
-//{
-//
-//}
-
 TPoint::TPoint(std::string name, int x, int y) : TBase(POINT, name, 10)
 {
 	this->x = x;

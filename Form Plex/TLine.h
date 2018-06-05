@@ -12,7 +12,6 @@ private:
 
 	friend void strToWords(std::string src, std::string *words, int &size);
 public:
-	//TLine();
 	TLine(TPoint *left, TPoint *right);
 	TLine(const TLine &src);
 	TLine(std::string src);

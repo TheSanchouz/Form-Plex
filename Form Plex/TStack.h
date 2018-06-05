@@ -8,17 +8,11 @@ private:
 	unsigned int size;
 	unsigned int last;
 public:
-	TStack(unsigned int n = 25)
+	TStack(unsigned int n = 0)
 	{
 		size = n;
 		last = 0;
 		arr = new T[size];
-		//T zero(0);
-
-		/*for (int i = 0; i < size; i++)
-		{
-			arr[i] = zero;
-		}*/
 	}
 
 	TStack(const TStack& src)
@@ -35,7 +29,7 @@ public:
 
 	~TStack()
 	{
-		//delete[] arr;
+		delete[] arr;
 	}
 
 	TStack<T>& operator= (const TStack<T>& src)
