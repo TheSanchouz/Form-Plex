@@ -42,23 +42,27 @@ void TPlex::addLine(TLine *l)
 		}
 		else if (left != nullptr && right != nullptr)
 		{
-			attachToLeft(left, l);
-
-			if (right->getLeft()->getName() == l->getLeft()->getName())
+			if (left->getName() != right->getName())
 			{
-				//delete l->getRight();
 
-				l->setRight(right->getLeft());
+				attachToLeft(left, l);
 
-				//l->getRight()->updateMultiplicity(1);
-			}
-			else
-			{
-				//delete l->getRight();
+				if (right->getLeft()->getName() == l->getLeft()->getName())
+				{
+					//delete l->getRight();
 
-				//l->setRight(right->getLeft());
+					l->setRight(right->getLeft());
 
-				//l->getRight()->updateMultiplicity(1);
+					//l->getRight()->updateMultiplicity(1);
+				}
+				else
+				{
+					//delete l->getRight();
+
+					//l->setRight(right->getLeft());
+
+					//l->getRight()->updateMultiplicity(1);
+				}
 			}
 		}
 	}
