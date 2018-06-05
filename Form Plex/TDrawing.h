@@ -1,11 +1,13 @@
 #pragma once
 #include "TPlex.h"
+#include <fstream>
 
 class TDrawing
 {
 	TPlex curPlex;
-	std::string getNextName();
 	char nextChr;
+
+	std::string getNextName();
 public:
 	TDrawing();
 	TDrawing(const TDrawing& src);

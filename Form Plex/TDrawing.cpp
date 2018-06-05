@@ -61,11 +61,30 @@ void TDrawing::deleteLine(std::string name)
 
 void TDrawing::save(std::string path)
 {
-	curPlex.save(path);
+	if (!path.empty())
+	{
+		std::ofstream outfile;
+		outfile.open(path);
+		outfile << nextChr << std::endl;
+		outfile.close();
+
+		curPlex.save(path);
+	}
 }
 void TDrawing::open(std::string path)
 {
-	curPlex.open(path);
+	if (!path.empty())
+	{
+		std::ifstream infile;
+		infile.open(path);
+
+		std::string buf;
+		getline(infile, buf);
+		nextChr = buf[0];
+		infile.close();
+
+		curPlex.open(path);
+	}
 }
 
 void TDrawing::showPointNames(System::Drawing::Graphics^ g)
