@@ -47,8 +47,6 @@ namespace FormPlex
 	private: System::Windows::Forms::ToolStripMenuItem^  ïåðåìåñòèòüÒî÷êóToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  ïîêàçàòüÈìåíàÒî÷åêToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  ïåðåêðàñèòüÏëåêñToolStripMenuItem;
-
-
 	private: System::ComponentModel::IContainer^  components;
 
 
@@ -79,9 +77,9 @@ namespace FormPlex
 			this->ñòåðåòüÐèñóíîêToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip->SuspendLayout();
 			this->SuspendLayout();
-			//
+			// 
 			// menuStrip
-			//
+			// 
 			this->menuStrip->ImageScalingSize = System::Drawing::Size(20, 20);
 			this->menuStrip->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(5) {
 				this->ñîçäàòüToolStripMenuItem,
@@ -93,23 +91,23 @@ namespace FormPlex
 			this->menuStrip->Size = System::Drawing::Size(1182, 28);
 			this->menuStrip->TabIndex = 0;
 			this->menuStrip->Text = L"menuStrip";
-			//
+			// 
 			// ñîçäàòüToolStripMenuItem
-			//
+			// 
 			this->ñîçäàòüToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->ëèíèþToolStripMenuItem });
 			this->ñîçäàòüToolStripMenuItem->Name = L"ñîçäàòüToolStripMenuItem";
 			this->ñîçäàòüToolStripMenuItem->Size = System::Drawing::Size(76, 24);
 			this->ñîçäàòüToolStripMenuItem->Text = L"Ñîçäàòü";
-			//
+			// 
 			// ëèíèþToolStripMenuItem
-			//
+			// 
 			this->ëèíèþToolStripMenuItem->Name = L"ëèíèþToolStripMenuItem";
 			this->ëèíèþToolStripMenuItem->Size = System::Drawing::Size(133, 26);
 			this->ëèíèþToolStripMenuItem->Text = L"Ëèíèþ";
 			this->ëèíèþToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::ëèíèþToolStripMenuItem_Click);
-			//
+			// 
 			// ôóíêöèèÏîÐàáîòåÑÏëåêñîìToolStripMenuItem
-			//
+			// 
 			this->ôóíêöèèÏîÐàáîòåÑÏëåêñîìToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
 				this->ïåðåìåñòèòüÏëåêñToolStripMenuItem,
 					this->ïåðåìåñòèòüÒî÷êóToolStripMenuItem, this->ïîêàçàòüÈìåíàÒî÷åêToolStripMenuItem, this->ïåðåêðàñèòüÏëåêñToolStripMenuItem
@@ -117,59 +115,58 @@ namespace FormPlex
 			this->ôóíêöèèÏîÐàáîòåÑÏëåêñîìToolStripMenuItem->Name = L"ôóíêöèèÏîÐàáîòåÑÏëåêñîìToolStripMenuItem";
 			this->ôóíêöèèÏîÐàáîòåÑÏëåêñîìToolStripMenuItem->Size = System::Drawing::Size(231, 24);
 			this->ôóíêöèèÏîÐàáîòåÑÏëåêñîìToolStripMenuItem->Text = L"Ôóíêöèè ïî ðàáîòå ñ ïëåêñîì";
-			//
+			// 
 			// ïåðåìåñòèòüÏëåêñToolStripMenuItem
-			//
+			// 
 			this->ïåðåìåñòèòüÏëåêñToolStripMenuItem->Name = L"ïåðåìåñòèòüÏëåêñToolStripMenuItem";
 			this->ïåðåìåñòèòüÏëåêñToolStripMenuItem->Size = System::Drawing::Size(239, 26);
 			this->ïåðåìåñòèòüÏëåêñToolStripMenuItem->Text = L"Ïåðåìåñòèòü ïëåêñ";
 			this->ïåðåìåñòèòüÏëåêñToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::ïåðåìåñòèòüÏëåêñToolStripMenuItem_Click);
-			//
+			// 
 			// ïåðåìåñòèòüÒî÷êóToolStripMenuItem
-			//
+			// 
 			this->ïåðåìåñòèòüÒî÷êóToolStripMenuItem->Name = L"ïåðåìåñòèòüÒî÷êóToolStripMenuItem";
 			this->ïåðåìåñòèòüÒî÷êóToolStripMenuItem->Size = System::Drawing::Size(239, 26);
 			this->ïåðåìåñòèòüÒî÷êóToolStripMenuItem->Text = L"Ïåðåìåñòèòü òî÷êó";
 			this->ïåðåìåñòèòüÒî÷êóToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::ïåðåìåñòèòüÒî÷êóToolStripMenuItem_Click);
-			//
+			// 
 			// ïîêàçàòüÈìåíàÒî÷åêToolStripMenuItem
-			//
-			this->ïîêàçàòüÈìåíàÒî÷åêToolStripMenuItem->Enabled = false;
+			// 
 			this->ïîêàçàòüÈìåíàÒî÷åêToolStripMenuItem->Name = L"ïîêàçàòüÈìåíàÒî÷åêToolStripMenuItem";
 			this->ïîêàçàòüÈìåíàÒî÷åêToolStripMenuItem->Size = System::Drawing::Size(239, 26);
 			this->ïîêàçàòüÈìåíàÒî÷åêToolStripMenuItem->Text = L"Ïîêàçàòü èìåíà òî÷åê";
 			this->ïîêàçàòüÈìåíàÒî÷åêToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::ïîêàçàòüÈìåíàÒî÷åêToolStripMenuItem_Click);
-			//
+			// 
 			// ïåðåêðàñèòüÏëåêñToolStripMenuItem
-			//
+			// 
 			this->ïåðåêðàñèòüÏëåêñToolStripMenuItem->Name = L"ïåðåêðàñèòüÏëåêñToolStripMenuItem";
 			this->ïåðåêðàñèòüÏëåêñToolStripMenuItem->Size = System::Drawing::Size(239, 26);
 			this->ïåðåêðàñèòüÏëåêñToolStripMenuItem->Text = L"Ïåðåêðàñèòü ïëåêñ";
 			this->ïåðåêðàñèòüÏëåêñToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::ïåðåêðàñèòüÏëåêñToolStripMenuItem_Click);
-			//
+			// 
 			// ñîõðàíèòüÐèñóíîêToolStripMenuItem
-			//
+			// 
 			this->ñîõðàíèòüÐèñóíîêToolStripMenuItem->Name = L"ñîõðàíèòüÐèñóíîêToolStripMenuItem";
 			this->ñîõðàíèòüÐèñóíîêToolStripMenuItem->Size = System::Drawing::Size(156, 24);
 			this->ñîõðàíèòüÐèñóíîêToolStripMenuItem->Text = L"Ñîõðàíèòü ðèñóíîê";
 			this->ñîõðàíèòüÐèñóíîêToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::ñîõðàíèòüÐèñóíîêToolStripMenuItem_Click);
-			//
+			// 
 			// îòêðûòüÐèñóíîêToolStripMenuItem
-			//
+			// 
 			this->îòêðûòüÐèñóíîêToolStripMenuItem->Name = L"îòêðûòüÐèñóíîêToolStripMenuItem";
 			this->îòêðûòüÐèñóíîêToolStripMenuItem->Size = System::Drawing::Size(140, 24);
 			this->îòêðûòüÐèñóíîêToolStripMenuItem->Text = L"Îòêðûòü ðèñóíîê";
 			this->îòêðûòüÐèñóíîêToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::îòêðûòüÐèñóíîêToolStripMenuItem_Click);
-			//
+			// 
 			// ñòåðåòüÐèñóíîêToolStripMenuItem
-			//
+			// 
 			this->ñòåðåòüÐèñóíîêToolStripMenuItem->Name = L"ñòåðåòüÐèñóíîêToolStripMenuItem";
 			this->ñòåðåòüÐèñóíîêToolStripMenuItem->Size = System::Drawing::Size(136, 24);
 			this->ñòåðåòüÐèñóíîêToolStripMenuItem->Text = L"Ñòåðåòü ðèñóíîê";
 			this->ñòåðåòüÐèñóíîêToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::ñòåðåòüÐèñóíîêToolStripMenuItem_Click);
-			//
+			// 
 			// MyForm
-			//
+			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1182, 753);

@@ -42,9 +42,8 @@ void TPlex::addLine(TLine *l)
 		}
 		else if (left != nullptr && right != nullptr)
 		{
-			if (left->getName() != right->getName())
+			if (true)
 			{
-
 				attachToLeft(left, l);
 
 				if (right->getLeft()->getName() == l->getLeft()->getName())
@@ -67,6 +66,7 @@ void TPlex::addLine(TLine *l)
 		}
 	}
 }
+
 
 TPlex::TPlex(TLine *l)
 {
@@ -737,8 +737,7 @@ void TPlex::save(std::string path)
 		TBase *cur = start;
 		TStack<TLine*> lines(100);
 		lines.push(nullptr);
-		std::ofstream outfile;
-		outfile.open(path);
+		std::ofstream outfile(path, std::ios::app);
 
 		while (cur != nullptr)
 		{
@@ -784,8 +783,7 @@ void TPlex::open(std::string path)
 	if (!path.empty())
 	{
 		std::string item;
-		std::ifstream infile;
-		infile.open(path);
+		std::ifstream infile(path);
 		TStack<TBase*> stack(100);
 
 		TPoint* points[100];
@@ -800,10 +798,10 @@ void TPlex::open(std::string path)
 		{
 			getline(infile, item);
 
-			if (item.find("|") == std::string::npos) 
+			/*if (item.find("|") == std::string::npos) 
 			{ 
 				break; 
-			}
+			}*/
 
 			if (item.find("POINT") == 0)
 			{

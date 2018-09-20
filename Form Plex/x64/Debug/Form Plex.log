@@ -1,0 +1,11 @@
+﻿  MyForm.cpp
+  TBase.cpp
+  TDrawing.cpp
+  TLine.cpp
+d:\visual projects\form plex\form plex\tline.cpp(54): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  TPlex.cpp
+  TPoint.cpp
+  strToWords.cpp
+  Создание кода...
+  .NETFramework,Version=v4.7.1.AssemblyAttributes.cpp
+  Form Plex.vcxproj -> D:\Visual Projects\Form Plex\x64\Debug\Form Plex.exe

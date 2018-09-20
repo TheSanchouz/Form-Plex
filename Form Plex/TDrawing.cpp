@@ -1,6 +1,6 @@
 #include "TDrawing.h"
 #include "TLine.h"
-#include <string>  
+#include <string>
 
 std::string TDrawing::getNextName()
 {
@@ -63,8 +63,7 @@ void TDrawing::save(std::string path)
 {
 	if (!path.empty())
 	{
-		std::ofstream outfile;
-		outfile.open(path);
+		std::ofstream outfile(path);
 		outfile << nextChr << std::endl;
 		outfile.close();
 
@@ -75,10 +74,9 @@ void TDrawing::open(std::string path)
 {
 	if (!path.empty())
 	{
-		std::ifstream infile;
-		infile.open(path);
+		std::ifstream infile(path);
 
-		std::string buf;
+		std::string buf = "";
 		getline(infile, buf);
 		nextChr = buf[0];
 		infile.close();
@@ -101,7 +99,7 @@ void TDrawing::draw(System::Drawing::Graphics^ g)
 	curPlex.draw(g);
 }
 
-void TDrawing::recolor(int color) 
+void TDrawing::recolor(int color)
 {
 	curPlex.recolor(color);
 }
